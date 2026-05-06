@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Membership | Resortify</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-overlay">
+        <div class="auth-modal">
+            <a href="index.html" class="close-btn">&times;</a>
+
+            <div class="auth-container">
+                
+                <section class="auth-split join-section" id="join-container">
+                    <h2 class="auth-title">NOT A MEMBER? JOIN NOW</h2>
+                    <div class="brand-logo">
+                        <span class="neu">resort</span><span class="pass">ify</span>
+                    </div>
+                    
+                    <p class="section-label">MEMBER BENEFITS</p>
+                    
+                    <div class="benefits-grid" id="benefits-grid">
+                        </div>
+
+                    <button class="btn-gold" id="btn-join-trigger">JOIN NOW</button>
+                </section>
+
+                <section class="auth-split login-section">
+                    <h2 class="auth-title">ALREADY A MEMBER? LOGIN</h2>
+                    
+                    <div class="tabs" id="login-tabs">
+                        <button class="tab-btn active" data-type="mobile">MOBILE NUMBER</button>
+                        <button class="tab-btn" data-type="email">EMAIL ADDRESS</button>
+                        <button class="tab-btn" data-type="member">MEMBERSHIP NUMBER</button>
+                    </div>
+
+                    <div class="login-form-container">
+                        <div id="input-mount">
+                            </div>
+
+                        <div class="consent-box">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">By continuing you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+
+                        <div class="partner-logos">
+                            <span class="p-logo">THE CHAMBERS</span>
+                            <span class="p-logo neu">NEUPASS</span>
+                            <span class="p-logo">EPICURE</span>
+                        </div>
+
+                        <button class="btn-gold-outline" id="btn-continue">CONTINUE</button>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="site-nav.js"></script>
+</body>
+</html>

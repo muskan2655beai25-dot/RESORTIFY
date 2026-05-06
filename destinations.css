@@ -1,0 +1,1205 @@
+/* --- Universal Cursor Reset --- */
+*, *::before, *::after {
+    cursor: default !important;
+}
+
+a, button, [role="button"], .tab-btn, .btn-gold, .btn-book, .btn-book-gold,
+.btn-read-now, .btn-subscribe, .load-more-btn, .featured-item,
+.view-link, .link-visit, .visit-link-gold, .explore-link,
+.links-columns a, .social-icons a, .load-more a {
+    cursor: pointer !important;
+}
+
+input, textarea, select {
+    cursor: text !important;
+}
+
+/* --- Destinations Page Specific Styles --- */
+
+.dest-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1920');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 45px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.accent-line-gold {
+    width: 60px;
+    border: none;
+    border-top: 1px solid #b2905a;
+    margin: 0 auto 20px;
+}
+
+/* Floating Search Bar */
+.search-container {
+    position: absolute;
+    bottom: -30px;
+    width: 70%;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.search-container i { color: #888; }
+
+/* Filter Section */
+.filter-section {
+    padding: 100px 10% 40px;
+    text-align: center;
+    background: #fff;
+}
+
+.filter-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.filter-subtitle {
+    color: #777;
+    margin: 15px 0 40px;
+}
+
+/* Filter Section - Updated for Pure CSS Scroll */
+.filter-tabs {
+    display: flex;
+    /* CHANGE THIS: flex-start ensures you start at the first item */
+    justify-content: flex-start; 
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow-x: auto; 
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    /* ADD THIS: adds a little breathing room at the start */
+    padding-left: 5%; 
+}
+
+/* To keep the Taj look, ensure the track doesn't force centering */
+.filter-tabs-track {
+    display: flex;
+    width: max-content;
+}
+
+.filter-tabs::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome/Safari */
+}
+
+
+
+.tab-btn {
+    padding: 25px 45px;
+    background: none;
+    border: none;
+    border-right: 1px solid #eee;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #444;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth pop-out transition */
+    flex: 0 0 auto;
+    position: relative;
+    top: 0;
+}
+
+.tab-btn:last-child {
+    border-right: none;
+}
+
+/* This creates the "Pop-out" and Highlight effect only on Hover */
+.tab-btn:hover {
+    color: #b2905a;
+    background-color: #ffffff;
+    /* This makes the button "pop out" by lifting it slightly */
+    transform: translateY(-5px);
+    /* Adds a luxury shadow to make it look like it popped up */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    /* Adds the gold indicator at the bottom */
+    box-shadow: inset 0 -4px 0 #b2905a, 0 10px 20px rgba(0,0,0,0.05);
+    z-index: 2; /* Ensures the shadow overlaps the border lines */
+}
+
+/* Hotel Grid */
+.hotel-results {
+    padding: 60px 10%;
+    background: #fff;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.hotel-card {
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+.hotel-img {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hotel-info {
+    padding: 30px;
+}
+
+.hotel-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hotel-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-gold {
+    background: #b2905a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-link {
+    text-decoration: none;
+    color: #b2905a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.load-more a { text-decoration: none; color: #b2905a; font-weight: bold; }
+/* --- Featured Destinations Slider Styles --- */
+/* --- Featured Destinations - Taj Style Scroll Snap --- */
+/* --- Featured Destinations - Taj Zoom & Pop Style --- */
+
+.featured-scroll-viewport {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    scrollbar-width: none; 
+    padding: 40px 0 80px; /* Increased padding for the "Pop Out" space */
+}
+
+.featured-scroll-viewport::-webkit-scrollbar {
+    display: none; 
+}
+
+.featured-scroll-track {
+    display: flex;
+    gap: 40px; /* More space between items */
+    padding: 0 10%; 
+    width: max-content;
+    align-items: center;
+}
+
+.featured-item {
+    flex: 0 0 240px; /* Made the images BIGGER (from 180px to 240px) */
+    scroll-snap-align: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.featured-img-box {
+    width: 100%;
+    height: 160px; /* Increased height */
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: #f9f9f9;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.featured-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease; /* Slow, luxury zoom */
+}
+
+.featured-item span {
+    font-size: 13px; /* Slightly larger text */
+    letter-spacing: 3px;
+    color: #333;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s;
+}
+
+/* --- THE HOVER POP-OUT & ZOOM --- */
+
+.featured-item:hover {
+    transform: translateY(-10px); /* Lifts the whole item up */
+}
+
+.featured-item:hover .featured-img-box {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+    border-color: transparent;
+}
+
+.featured-item:hover .featured-img-box img {
+    transform: scale(1.15); /* The Zoom-In effect */
+}
+
+.featured-item:hover span {
+    color: #b2905a;
+    font-weight: 600;
+}
+/* --- Taj Style Section Headers --- */
+
+.section-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between lines and text */
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+.section-title-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; /* Large, elegant size */
+    font-weight: 400; /* Thin, not bold */
+    letter-spacing: 5px; /* Important for that luxury feel */
+    color: #333;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-line {
+    height: 1px;
+    width: 60px; /* Length of the horizontal lines */
+    background-color: #333;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+/* Optional: Add this to your Featured Item Text for better centering */
+.featured-item span {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #444;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
+/* destination/city, brand,themes
+/* --- Secondary Filters --- */
+.secondary-filters {
+    padding: 40px 10%;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-dropdown-container {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr; /* Matches the layout in your screenshot */
+    gap: 40px;
+}
+
+.dropdown-item {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.dropdown-item input, .dropdown-item select {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    color: #444;
+    background: transparent;
+    appearance: none; /* Removes default arrow for custom one */
+}
+
+.dropdown-item i {
+    color: #888;
+    font-size: 14px;
+}
+
+.search-icon-small { margin-right: 15px; }
+
+/* --- Hotel Grid & Cards --- */
+.hotel-results {
+    padding: 60px 10%;
+    background: #fff;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px; /* Vertical and Horizontal gap */
+}
+
+.hotel-card {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.hotel-img-container {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.hotel-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hotel-card:hover .hotel-img-container img {
+    transform: scale(1.05);
+}
+
+.hotel-card-content {
+    padding: 30px;
+    background: #fff;
+}
+
+.hotel-card-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hotel-card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-book {
+    background: #b2905a;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background: #967a4b;
+}
+
+.link-visit {
+    text-decoration: none;
+    color: #b2905a;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* --- Load More --- */
+.load-more-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.load-more-btn {
+    background: none;
+    border: none;
+    color: #b2905a;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+/* --- Other Hotels Section --- */
+.other-hotels-section {
+    padding: 80px 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.other-hotels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Exactly 3 columns */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.other-hotel-card {
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.other-img-box {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.other-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Ease-out & Zoom */
+.other-hotel-card:hover .other-img-box img {
+    transform: scale(1.1);
+}
+
+/* Title Line Styling */
+.title-with-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.accent-line-small {
+    width: 25px;
+    height: 1px;
+    background-color: #333;
+}
+
+.other-card-info h4 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.other-card-info p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Action Buttons */
+.other-card-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-book-gold {
+    background: #b2905a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.visit-link-gold {
+    text-decoration: none;
+    color: #b2905a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Explore More Footer */
+.explore-more-footer {
+    margin-top: 60px;
+}
+
+.explore-link {
+    text-decoration: none;
+    color: #b2905a;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* --- Travel Stories Section --- */
+.travel-stories-section {
+    padding: 100px 10%;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+/* Header with Title on left, Text on right */
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.title-line-horizontal {
+    width: 60px;
+    height: 1px;
+    background: #333;
+}
+
+.header-left h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.header-right {
+    flex: 1.2;
+}
+
+.header-right p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 4-Column Grid */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.story-card {
+    background: #fff;
+}
+
+.story-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes images perfectly square */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.story-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typography */
+.story-content h4 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    min-height: 40px; /* Keeps titles aligned */
+}
+
+.story-content p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Simple Button */
+.btn-read-now {
+    background: #b2905a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn-read-now:hover {
+    background: #967a4b; /* Simple color change only */
+}
+/* --- Resortify Luxury Footer --- */
+.resortify-footer {
+    background-color: #111; /* Deep charcoal */
+    color: #fff;
+    padding: 80px 10% 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.brand-logo-text {
+    font-size: 28px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.brand-tagline {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #b2905a;
+    text-transform: uppercase;
+}
+
+.footer-top h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+/* Newsletter styling */
+.subscribe-form {
+    display: flex;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    outline: none;
+}
+
+.btn-subscribe {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-subscribe:hover {
+    background: #b2905a;
+}
+
+/* Contact Info Grid */
+.contact-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-item h5 {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* Links Columns */
+.links-columns {
+    display: flex;
+    gap: 40px;
+}
+
+.links-columns ul {
+    list-style: none;
+}
+
+.links-columns li {
+    margin-bottom: 12px;
+}
+
+.links-columns a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.links-columns a:hover {
+    color: #b2905a;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #b2905a;
+}
+
+/* Footer Bottom */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #222;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #666;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/* ==================== WISHLIST FEATURE ==================== */
+.hotel-img-container {
+    position: relative;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.92);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #999;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+    color: #b2905a;
+}
+
+.wishlist-btn.saved {
+    color: #b2905a;
+    background: #fff8f0;
+}
+
+.wishlist-btn.saved i {
+    font-weight: 900;
+}
+
+/* Wishlist floating toggle button */
+.wishlist-toggle-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #b2905a;
+    color: white;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer !important;
+    z-index: 9000;
+    box-shadow: 0 6px 20px rgba(178,144,90,0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wishlist-toggle-btn:hover {
+    background: #967a4b;
+    transform: scale(1.05);
+}
+
+.wishlist-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #333;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Wishlist slide-in panel */
+.wishlist-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 9001;
+}
+
+.wishlist-overlay.active { display: block; }
+
+.wishlist-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9002;
+    transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+}
+
+.wishlist-panel.active { right: 0; }
+
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-header h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #333;
+}
+
+.wishlist-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer !important;
+    transition: color 0.3s;
+}
+
+.wishlist-close:hover { color: #333; }
+
+.wishlist-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 30px;
+}
+
+.wishlist-empty {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 60px;
+}
+
+.wishlist-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.wishlist-item-img {
+    width: 70px;
+    height: 55px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.wishlist-item-info {
+    flex: 1;
+}
+
+.wishlist-item-info h4 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #333;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+.wishlist-remove {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer !important;
+    transition: color 0.3s;
+}
+
+.wishlist-remove:hover { color: #b2905a; }
+
+/* ==================== REVIEWS FEATURE ==================== */
+.hotel-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 18px;
+    flex-wrap: wrap;
+}
+
+.stars { color: #b2905a; font-size: 13px; }
+
+.rating-count {
+    font-size: 12px;
+    color: #999;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-review-link {
+    background: none;
+    border: none;
+    color: #b2905a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer !important;
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+    padding: 0;
+}
+
+/* Reviews Modal */
+.review-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9100;
+}
+
+.review-modal-overlay.active { display: block; }
+
+.review-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 560px;
+    max-height: 80vh;
+    background: #fff;
+    z-index: 9101;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.review-modal.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.review-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-modal-header h3 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.review-modal-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer !important;
+    transition: color 0.3s;
+}
+
+.review-modal-close:hover { color: #333; }
+
+.review-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px 30px;
+}
+
+/* Existing reviews */
+.existing-reviews { margin-bottom: 30px; }
+
+.review-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.review-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-item-name {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.review-item-stars { color: #b2905a; font-size: 11px; }
+
+.review-item-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Write review form */
+.write-review-section h4 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.star-input {
+    display: flex;
+    gap: 5px;
+    font-size: 22px;
+    color: #ddd;
+    margin-bottom: 15px;
+    cursor: pointer !important;
+}
+
+.star-input i { transition: color 0.2s; cursor: pointer !important; }
+.star-input i.active, .star-input i:hover { color: #b2905a; }
+
+.review-name-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #444;
+    outline: none;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+.review-textarea {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: #444;
+    outline: none;
+    resize: none;
+    height: 100px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.btn-submit-review {
+    background: #b2905a;
+    color: white;
+    border: none;
+    padding: 13px 35px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer !important;
+    transition: background 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-submit-review:hover { background: #967a4b; }

@@ -1,0 +1,154 @@
+:root {
+    --gold: #b2905a;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+    --gray-bg: #fdfdfd;
+    --border: #ececec;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: var(--dark);
+}
+
+.comparison-section {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.comp-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.comp-header span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.comp-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.comp-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* --- THE TABLE --- */
+.table-container {
+    overflow-x: auto; /* For mobile responsiveness */
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Feature Name Column */
+.feature-col { background: #fff; position: sticky; left: 0; z-index: 10; }
+.feature-name {
+    text-align: left !important;
+    font-weight: 600;
+    font-size: 13px;
+    color: #555;
+    background: #fff;
+}
+
+/* Room Headers */
+.room-head { padding: 10px; }
+.room-head img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.room-head h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.room-head .price {
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Highlighting the middle column */
+.room-head.highlight {
+    background: #fff;
+    position: relative;
+    border: 1px solid var(--gold);
+    padding: 20px 10px;
+    margin-top: -10px;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: white;
+    font-size: 9px;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Category Separator */
+.category-row td {
+    background: #f8f8f8;
+    text-align: left !important;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #aaa;
+    padding: 15px 25px;
+}
+
+/* Icons */
+.check { color: #2ecc71; font-size: 16px; }
+.dash { color: #ddd; }
+
+/* Buttons */
+.btn-select {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-select.gold {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+}
+
+.btn-select:hover {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+}

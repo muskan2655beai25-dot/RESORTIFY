@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Destinations | Resortify Luxury</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-container">
+            <div class="top-left">
+                <a href="#">Languages</a>
+                <a href="#">Property Search</a>
+            </div>
+            <div class="top-right">
+                <a href="login.html">Login / Join</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <span class="logo-text">RESORTIFY</span>
+            <span class="logo-sub">Est. 1903</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="destinations.html">DESTINATIONS</a></li>
+            <li><a href="hotels.html">HOTELS</a></li>
+            <li class="has-mega">
+                <a href="experiences.html">EXPERIENCES <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                <div class="mega-panel">
+                    <div class="mega-inner">
+                        <div class="mega-left">
+                            <h3>World-Class Experiences</h3>
+                            <p>Handcrafted moments that transcend ordinary travel.</p>
+                            <a href="#" class="mega-cta">View All ›</a>
+                        </div>
+                        <div class="mega-right">
+                            <div class="mega-grid">
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400')"></div>
+                                    <span>Wellness & Spa</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400')"></div>
+                                    <span>Culinary Arts</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400')"></div>
+                                    <span>Timeless Weddings</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400')"></div>
+                                    <span>Adventure Stays</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="offers.html">OFFERS</a></li>
+            <li><a href="login.html">MEMBERSHIPS</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="nav-search-btn" id="searchToggle"><i class="fas fa-search"></i></button>
+            <button class="book-btn" <a href="offers.html">BOOK A STAY</button></a>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+    <header class="dest-hero">
+        <div class="hero-content">
+            <hr class="accent-line-gold">
+            <h1>OUR DESTINATIONS</h1>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Click here to search for Destinations or Hotels.">
+            <i class="fas fa-microphone"></i>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <div class="section-title-box">
+            <hr class="accent-line-dark">
+            <h2>THE WORLD AWAITS</h2>
+        </div>
+        <p class="filter-subtitle">The world is full of amazing experiences. Allow us to show you just how wonderful they can be.</p>
+        
+        <div class="filter-tabs">
+    <div class="filter-tabs-track">
+        <button class="tab-btn">ALL</button>
+        <button class="tab-btn">INDIA</button>
+        <button class="tab-btn">SRI LANKA</button>
+        <button class="tab-btn">UNITED ARAB EMIRATES</button>
+        <button class="tab-btn">UNITED KINGDOM</button>
+        <button class="tab-btn">SOUTH AFRICA</button>
+        <button class="tab-btn">USA</button>
+        <button class="tab-btn">NEPAL</button>
+        <button class="tab-btn">UAE</button>
+        <button class="tab-btn">GERMANY</button>
+        <button class="tab-btn">THE MALDIVES</button>
+        <button class="tab-btn">BHUTAN</button>
+    </div>
+</div>
+    </section>
+<section class="featured-slider-section">
+    <div class="section-title-box">
+        <span class="title-line"></span>
+        <h2>FEATURED DESTINATIONS</h2>
+        <span class="title-line"></span>
+    </div>
+
+    <div class="featured-scroll-viewport">
+        <div class="featured-scroll-track">
+            
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?auto=format&fit=crop&w=600" alt="Agra">
+                </div>
+                <span>AGRA</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://cdn.sanity.io/images/ocl5w36p/prod5/989bf6d3e799c9e79b8193f5286a6597ee1e15d8-414x310.jpg?w=480&auto=format&dpr=2" alt="Ahmedabad">
+                </div>
+                <span>AHMEDABAD</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1602643163983-ed0babc39797?auto=format&fit=crop&w=600" alt="Alibaug">
+                </div>
+                <span>ALIBAUG</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600" alt="Alleppey">
+                </div>
+                <span>ALLEPPEY</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600" alt="Goa">
+                </div>
+                <span>GOA</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://cdn.sanity.io/images/ocl5w36p/prod5/ce529d7d8e78fd91d775e99cba0ce0dc47fbbe10-414x310.jpg?w=480&auto=format&dpr=2" alt="Varanasi">
+                </div>
+                <span>VARANASI</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?auto=format&fit=crop&w=600" alt="Jaipur">
+                </div>
+                <span>JAIPUR</span>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-img-box">
+                    <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=600" alt="Mumbai">
+                </div>
+                <span>MUMBAI</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="secondary-filters">
+    <div class="filter-dropdown-container">
+        <div class="dropdown-item">
+            <i class="fas fa-search search-icon-small"></i>
+            <input type="text" placeholder="Destination / City" class="dropdown-input">
+        </div>
+        
+        <div class="dropdown-item">
+            <select>
+                <option value="" disabled selected>Brands</option>
+                <option value="luxury">Resortify Luxury</option>
+                <option value="safari">Resortify Safari</option>
+                <option value="heritage">Heritage Collection</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="dropdown-item">
+            <select>
+                <option value="" disabled selected>Themes</option>
+                <option value="beach">Beachfront</option>
+                <option value="mountains">Mountain Retreat</option>
+                <option value="wellness">Wellness & Spa</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+</section>
+
+<section class="hotel-results">
+    <div class="hotel-grid">
+        
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800" alt="Baghvan">
+            </div>
+            <div class="hotel-card-content">
+                <h3>BAGHVAN, A MG SAFARI – PENCH NATIONAL PARK</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Embark on a journey to the wild at Baghvan, where the raw beauty of Pench National Park meets luxury lodges and thrilling safaris.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800" alt="Jai Mahal">
+            </div>
+            <div class="hotel-card-content">
+                <h3>JAI MAHAL PALACE, JAIPUR</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Live the royal fantasy in Jaipur's heritage gem—Jai Mahal Palace, where ornate architecture and regal gardens await your arrival.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800" alt="Pashan Garh">
+            </div>
+            <div class="hotel-card-content">
+                <h3>PASHAN GARH, A MG SAFARI – PANNA NATIONAL PARK</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Immerse in nature's wonder at Pashan Garh, featuring rugged stone cottages and breathtaking views of the Panna wilderness.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800" alt="Meghauli Serai">
+            </div>
+            <div class="hotel-card-content">
+                <h3>MEGHAULI SERAI, A MG SAFARI – CHITWAN NATIONAL PARK</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Commune with wildlife at Meghauli Serai, where pristine park views and contemporary luxury create a serene jungle escape.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800" alt="Banjaar Tola">
+            </div>
+            <div class="hotel-card-content">
+                <h3>BANJAAR TOLA, A MG SAFARI – KANHA NATIONAL PARK</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Experience the heart of the tiger country in luxury tented suites overlooking the Banjaar River and Kanha’s dense forests.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <div class="hotel-img-container">
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=800" alt="Umaid Bhawan">
+            </div>
+            <div class="hotel-card-content">
+                <h3>UMAID BHAWAN PALACE, JODHPUR</h3>
+                <div class="hotel-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="rating-count">(<span class="review-count">0</span> reviews)</span><button class="btn-review-link">Write a Review</button></div>
+                <p>Perched high above the desert city of Jodhpur, this golden-yellow sandstone monument is one of the world's largest private residences.</p>
+                <div class="card-footer">
+                    <button class="btn-book">BOOK NOW</button>
+                    <a href="#" class="link-visit">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="load-more-container">
+        <a href="#" class="load-more-btn">EXPLORE MORE <i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
+
+<section class="other-hotels-section">
+    <div class="section-title-box">
+        <span class="title-line"></span>
+        <h2>OTHER RESORTIFY HOTELS</h2>
+        <span class="title-line"></span>
+    </div>
+
+    <div class="other-hotels-grid">
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>THE CLARIDGES NEW DELHI</h4></div>
+                <p>A beacon of excellence since 1955, offering timeless luxury in the heart of the capital...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>BRIJ ANAYRA, DHARAMSHALA</h4></div>
+                <p>Wake to birdsong and sunlit curtains at Brij Anayra, nestled in 16 acres of lush tea gardens...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>BRIJ ATMANYA, NAINITAL</h4></div>
+                <p>Perched 5,000 feet above sea level, Brij Atmanya is a sanctuary of stone and serenity...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>BRIJ BAGEECHA, JAIPUR</h4></div>
+                <p>Luxury villas with private heated plunge pools, where the desert sun meets modern comfort...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>BRIJ CASA SUSEGAD, GOA</h4></div>
+                <p>A serene Goan retreat in Loutolim's forested heart, where history and heritage meet...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>BRIJ LAKSHMAN SAGAR, PALI</h4></div>
+                <p>Once a 19th-century hunting lodge, this sanctuary offers a raw, wild heart experience...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>RAMBAGH PALACE, JAIPUR</h4></div>
+                <p>The "Jewel of Jaipur" offers a step back in time into the lifestyle of the Maharajas...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>MG EXOTICA, MALDIVES</h4></div>
+                <p>Escape to an island sanctuary surrounded by the crystal blue waters of the Indian Ocean...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-hotel-card">
+            <div class="other-img-box"><img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=600"></div>
+            <div class="other-card-info">
+                <div class="title-with-line"><span class="accent-line-small"></span><h4>FALAKNUMA PALACE, HYDERABAD</h4></div>
+                <p>Mirror in the sky—experience the opulence of the Nizams in this restored palace...</p>
+                <div class="other-card-actions">
+                    <button class="btn-book-gold">BOOK NOW</button>
+                    <a href="#" class="visit-link-gold">VISIT HOTEL <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore-more-footer">
+        <a href="#" class="explore-link">EXPLORE MORE <i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
+<section class="travel-stories-section">
+    <div class="section-header-flex">
+        <div class="header-left">
+            <span class="title-line-horizontal"></span>
+            <h2>TRAVEL STORIES</h2>
+        </div>
+        <div class="header-right">
+            <p>Dive into the world of Resortify Hotels through our blogs, offering unique perspectives on luxury stays, dining, culture and unforgettable experiences.</p>
+        </div>
+    </div>
+
+    <div class="stories-grid">
+        <div class="story-card">
+            <div class="story-img-box">
+                <img src="https://images.unsplash.com/photo-1543968332-f99478b1ebdc?auto=format&fit=crop&w=600" alt="Mountain Retreat">
+            </div>
+            <div class="story-content">
+                <h4>RETREAT TO THE HILLS WITH RESORTIFY</h4>
+                <p>Nestled within breathtaking mountain ranges are some of India's finest retreats. Apart from providin...</p>
+                <button class="btn-read-now">READ NOW</button>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <div class="story-img-box">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600" alt="International">
+            </div>
+            <div class="story-content">
+                <h4>EXPLORE TOP INTERNATIONAL DESTINATIONS</h4>
+                <p>Experience the best of worldly culture and luxury with 8 top international destinations from India. ...</p>
+                <button class="btn-read-now">READ NOW</button>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <div class="story-img-box">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=600" alt="Beach Escapes">
+            </div>
+            <div class="story-content">
+                <h4>LUXURY ESCAPES TO BEACH DESTINATIONS</h4>
+                <p>Explore the 5 must-visit beach destinations in India. Unwind in luxury, surrounded by pristine beach...</p>
+                <button class="btn-read-now">READ NOW</button>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <div class="story-img-box">
+                <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=600" alt="Tea Estates">
+            </div>
+            <div class="story-content">
+                <h4>EXPLORE TEA ESTATES OF INDIA</h4>
+                <p>Immerse yourself in the rich history and culture of tea cultivation in India with Resortify Hotels. From t...</p>
+                <button class="btn-read-now">READ NOW</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="resortify-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <h1 class="brand-logo-text">RESORTIFY</h1>
+            <p class="brand-tagline">Luxurious Wellness & Retreats</p>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4>SUBSCRIBE FOR LATEST UPDATES</h4>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email Address" class="footer-input">
+                <button class="btn-subscribe">SUBSCRIBE</button>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h5>FOR BOOKINGS CONTACT</h5>
+                    <p>1-800-RESORT-IFY</p>
+                    <p>reservations@resortify.edu.in</p>
+                </div>
+                <div class="contact-item">
+                    <h5>CUSTOMER SUPPORT</h5>
+                    <p>contact@resortify.com</p>
+                    <p>feedback@resortify.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <div class="links-columns">
+                <ul>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Wellness</a></li>
+                    <li><a href="#">Event Venues</a></li>
+                    <li><a href="#">Resortify Magazine</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">About Resortify</a></li>
+                    <li><a href="#">Holidays</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Gifting</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <h4>CONNECT WITH US</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Resortify Hotels & Resorts. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility</a>
+        </div>
+    </div>
+</footer>
+<!-- ===== WISHLIST PANEL ===== -->
+<div class="wishlist-overlay" id="wishlistOverlay"></div>
+<div class="wishlist-panel" id="wishlistPanel">
+    <div class="wishlist-header">
+        <h3>MY WISHLIST</h3>
+        <button class="wishlist-close" id="wishlistClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wishlist-body" id="wishlistBody">
+        <p class="wishlist-empty">No saved properties yet.<br>Click the <i class="far fa-heart"></i> on any hotel to save it.</p>
+    </div>
+</div>
+
+<!-- ===== REVIEWS MODAL ===== -->
+<div class="review-modal-overlay" id="reviewModalOverlay"></div>
+<div class="review-modal" id="reviewModal">
+    <div class="review-modal-header">
+        <h3 id="reviewModalTitle">REVIEWS</h3>
+        <button class="review-modal-close" id="reviewModalClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="review-modal-body">
+        <!-- Existing Reviews -->
+        <div class="existing-reviews" id="existingReviews"></div>
+
+        <!-- Write a Review Form -->
+        <div class="write-review-section">
+            <h4>SHARE YOUR EXPERIENCE</h4>
+            <div class="star-input" id="starInput">
+                <i class="far fa-star" data-val="1"></i>
+                <i class="far fa-star" data-val="2"></i>
+                <i class="far fa-star" data-val="3"></i>
+                <i class="far fa-star" data-val="4"></i>
+                <i class="far fa-star" data-val="5"></i>
+            </div>
+            <input type="text" class="review-name-input" id="reviewName" placeholder="Your Name">
+            <textarea class="review-textarea" id="reviewText" placeholder="Tell us about your stay..."></textarea>
+            <button class="btn-submit-review" id="submitReview">SUBMIT REVIEW</button>
+        </div>
+    </div>
+</div>
+
+<!-- Wishlist icon in top bar -->
+<button class="wishlist-toggle-btn" id="wishlistToggle">
+    <i class="far fa-heart"></i>
+    <span class="wishlist-badge" id="wishlistBadge">0</span>
+</button>
+
+<!-- All JS merged into one file -->
+<script src="destinations.js"></script>
+    </body>
+</html>

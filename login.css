@@ -1,0 +1,320 @@
+:root {
+    --gold: #ad8b3a;
+    --gold-hover: #c5a65c;
+    --dark: #1a1a1a;
+    --gray-bg: #fdfdfd;
+    --text-muted: #666;
+    --border: #ececec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920') center/cover;
+}
+
+.auth-overlay {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal {
+    background: white;
+    width: 90%;
+    max-width: 1100px;
+    height: 650px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    display: flex;
+    overflow: hidden;
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 28px;
+    text-decoration: none;
+    color: var(--dark);
+    z-index: 10;
+}
+
+.auth-container {
+    display: flex;
+    width: 100%;
+}
+
+.auth-split {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.join-section {
+    background: var(--gray-bg);
+    border-right: 1px solid var(--border);
+    align-items: center;
+}
+
+.auth-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.brand-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.brand-logo .neu {
+    font-weight: 600;
+}
+
+.brand-logo .pass {
+    color: var(--gold);
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.benefit-card {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    border: 1px solid var(--gold);
+    background-size: cover;
+    background-position: center;
+}
+
+.benefit-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding-bottom: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--gold);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+}
+
+/* Form Styling */
+.input-field {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.input-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+}
+
+.country-code {
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--dark);
+}
+
+.consent-box {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.consent-box a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.btn-gold,
+.btn-gold-outline {
+    width: 100%;
+    padding: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: white;
+    border: none;
+}
+
+.btn-gold:hover {
+    background: var(--gold-hover);
+}
+
+.btn-gold-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-gold-outline:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    opacity: 0.5;
+    margin-bottom: 30px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .auth-modal {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .auth-container {
+        flex-direction: column;
+    }
+
+    .join-section {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+/* Success Overlay Styles */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.success-card {
+    background: white;
+    padding: 60px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: translateY(20px);
+    animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gold);
+    color: white;
+    font-size: 40px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+}
+
+.welcome-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.sub-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Animations (Syllabus: Read/Write CSS via JS/Events) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}

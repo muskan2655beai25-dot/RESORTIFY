@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resortify | Luxury Reimagined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-logo">RESORTIFY</div>
+        <div class="preloader-bar"><div class="preloader-fill"></div></div>
+        <div class="preloader-text">Curating your experience...</div>
+    </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-inner">
+        <div class="top-left">
+            <a href="#"><i class="fas fa-phone"></i> 1-800-111-825</a>
+            <span class="divider">|</span>
+            <a href="#">reservations@resortify.com</a>
+        </div>
+        <div class="top-center">
+            <span class="top-marquee">✦ Exclusive Member Rates Available — Join Neupass Today ✦ Early Bird Packages from ₹8,999/night ✦ New: Maldives Collection Now Open</span>
+        </div>
+        <div class="top-right">
+            <a href="login.html">Login</a>
+            <a href="login.html" class="join-btn">Join Neupass</a>
+        </div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <span class="logo-text">RESORTIFY</span>
+            <span class="logo-sub">Est. 1903</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="destinations.html">DESTINATIONS</a></li>
+            <li><a href="hotels.html">HOTELS</a></li>
+            <li class="has-mega">
+                <a href="experiences.html">EXPERIENCES <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                <div class="mega-panel">
+                    <div class="mega-inner">
+                        <div class="mega-left">
+                            <h3>World-Class Experiences</h3>
+                            <p>Handcrafted moments that transcend ordinary travel.</p>
+                            <a href="#" class="mega-cta">View All ›</a>
+                        </div>
+                        <div class="mega-right">
+                            <div class="mega-grid">
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400')"></div>
+                                    <span>Wellness & Spa</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400')"></div>
+                                    <span>Culinary Arts</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400')"></div>
+                                    <span>Timeless Weddings</span>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mi-img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400')"></div>
+                                    <span>Adventure Stays</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="offers.html">OFFERS</a></li>
+            <li><a href="login.html">MEMBERSHIPS</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="nav-search-btn" id="searchToggle"><i class="fas fa-search"></i></button>
+            <button class="book-btn"><a href="offers.html">BOOK A STAY</button></a>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- FULLSCREEN SEARCH -->
+<div class="fullscreen-search" id="fullscreenSearch">
+    <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+    <div class="search-inner">
+        <p class="search-label">What are you looking for?</p>
+        <input type="text" class="search-input" id="searchInput" placeholder="Destinations, hotels, experiences...">
+        <div class="search-suggestions">
+            <span>Popular:</span>
+            <a href="#">Udaipur</a>
+            <a href="#">Maldives</a>
+            <a href="#">Goa</a>
+            <a href="#">Dubai</a>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920')"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920')"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-label-row">
+            <span class="hero-eyebrow">✦ The Art of Extraordinary Living</span>
+        </div>
+        <h1 class="hero-title">
+            <span class="line-1">Experience</span>
+            <span class="line-2 italic-serif">The Grandeur</span>
+        </h1>
+        <p class="hero-subtitle">From royal palaces to serene coastal retreats — a world of unparalleled luxury awaits.</p>
+        <div class="hero-ctas">
+            <a href="#booking" class="cta-primary">Explore Destinations</a>
+            <a href="destinations.html" class="cta-secondary">
+                <span class="play-icon"><i class="fas fa-play"></i></span>
+                Watch Film
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-slide-nav">
+        <button class="slide-dot active" data-index="0"></button>
+        <button class="slide-dot" data-index="1"></button>
+        <button class="slide-dot" data-index="2"></button>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+
+    <div class="hero-stats">
+        <div class="stat-item">
+            <span class="stat-num" data-target="187">0</span>
+            <span class="stat-label">Properties</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" data-target="32">0</span>
+            <span class="stat-label">Countries</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" data-target="120">0</span>
+            <span class="stat-label">Years Legacy</span>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING WIDGET -->
+<section class="booking-section" id="booking">
+    <div class="booking-widget">
+        <div class="booking-tabs">
+            <button class="b-tab active" data-tab="hotels">Hotels</button>
+            <button class="b-tab" data-tab="dining">Dining</button>
+            <button class="b-tab" data-tab="spa">Spa & Wellness</button>
+            <button class="b-tab" data-tab="events">Events</button>
+        </div>
+        <div class="booking-form" id="tab-hotels">
+            <div class="bfield" id="dest-field">
+                <label>DESTINATION</label>
+                <div class="bfield-value" id="dest-val">Select Location</div>
+                <div class="dest-dropdown" id="destDropdown">
+                    <div class="dest-regions">
+                        <div class="dest-region">
+                            <h4>India</h4>
+                            <a href="#" class="dest-opt" data-place="Udaipur, Rajasthan">Udaipur, Rajasthan</a>
+                            <a href="#" class="dest-opt" data-place="Goa Beaches">Goa Beaches</a>
+                            <a href="#" class="dest-opt" data-place="Jaipur, Pink City">Jaipur, Pink City</a>
+                            <a href="#" class="dest-opt" data-place="Mumbai, Maharashtra">Mumbai, Maharashtra</a>
+                        </div>
+                        <div class="dest-region">
+                            <h4>International</h4>
+                            <a href="#" class="dest-opt" data-place="Maldives">Maldives</a>
+                            <a href="#" class="dest-opt" data-place="Dubai, UAE">Dubai, UAE</a>
+                            <a href="#" class="dest-opt" data-place="London, UK">London, UK</a>
+                            <a href="#" class="dest-opt" data-place="Paris, France">Paris, France</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bfield">
+                <label>CHECK-IN</label>
+                <input type="date" class="bdate" id="checkin">
+            </div>
+            <div class="bfield">
+                <label>CHECK-OUT</label>
+                <input type="date" class="bdate" id="checkout">
+            </div>
+            <div class="bfield guest-field" id="guestField">
+                <label>GUESTS & ROOMS</label>
+                <div class="bfield-value" id="guest-val">2 Adults · 1 Room</div>
+                <div class="guest-panel" id="guestPanel">
+                    <div class="g-row">
+                        <div><span>Adults</span><small>Age 18+</small></div>
+                        <div class="g-counter">
+                            <button class="g-btn" data-type="adults" data-action="minus">−</button>
+                            <span id="g-adults">2</span>
+                            <button class="g-btn" data-type="adults" data-action="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="g-row">
+                        <div><span>Children</span><small>Age 2–17</small></div>
+                        <div class="g-counter">
+                            <button class="g-btn" data-type="children" data-action="minus">−</button>
+                            <span id="g-children">0</span>
+                            <button class="g-btn" data-type="children" data-action="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="g-row">
+                        <div><span>Rooms</span></div>
+                        <div class="g-counter">
+                            <button class="g-btn" data-type="rooms" data-action="minus">−</button>
+                            <span id="g-rooms">1</span>
+                            <button class="g-btn" data-type="rooms" data-action="plus">+</button>
+                        </div>
+                    </div>
+                    <button class="g-apply" id="applyGuests">Apply</button>
+                </div>
+            </div>
+            <button class="booking-submit" id="bookingSubmit">
+                <span>CHECK AVAILABILITY</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="booking-promo">
+            <i class="fas fa-tag"></i>
+            <span>Members save up to <strong>30%</strong> — <a href="login.html">Join Neupass Free</a></span>
+        </div>
+    </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Signature Collections</p>
+                <h2 class="sh-title">Curated For Every Soul</h2>
+            </div>
+        </div>
+        <p class="sh-desc">Discover spaces where architecture whispers history and every corner tells a story of unmatched elegance.</p>
+    </div>
+
+    <div class="collections-grid">
+        <div class="col-card large reveal-item" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200')">
+            <div class="col-overlay"></div>
+            <div class="col-content">
+                <span class="col-tag">The Royal Collection</span>
+                <h3>Living Palaces</h3>
+                <p>Step into centuries of royal heritage</p>
+                <a href="#" class="col-link">Discover ›</a>
+            </div>
+            <div class="col-count">18 Properties</div>
+        </div>
+        <div class="col-right">
+            <div class="col-card reveal-item" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800')">
+                <div class="col-overlay"></div>
+                <div class="col-content">
+                    <span class="col-tag">Coastal Luxury</span>
+                    <h3>Beach Resorts</h3>
+                    <a href="#" class="col-link">Discover ›</a>
+                </div>
+                <div class="col-count">34 Properties</div>
+            </div>
+            <div class="col-card reveal-item" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800')">
+                <div class="col-overlay"></div>
+                <div class="col-content">
+                    <span class="col-tag">Urban Sanctuaries</span>
+                    <h3>City Hotels</h3>
+                    <a href="hotels.html" class="col-link">Discover ›</a>
+                </div>
+                <div class="col-count">52 Properties</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LATEST OFFERS -->
+<section class="offers-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Limited Time</p>
+                <h2 class="sh-title">Latest Offers</h2>
+            </div>
+        </div>
+        <a href="offers.html" class="view-all-link">View All Offers ›</a>
+    </div>
+
+    <div class="offers-track-wrapper">
+        <div class="offers-track" id="offersTrack">
+            <div class="offer-card reveal-item">
+                <div class="oc-img" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600')">
+                    <div class="oc-badge">MEMBER EXCLUSIVE</div>
+                </div>
+                <div class="oc-body">
+                    <span class="oc-tag">Suites</span>
+                    <h4>Suite Surprises</h4>
+                    <p>Curated surprises and bespoke services tailored for our most valued guests.</p>
+                    <div class="oc-footer">
+                        <span class="oc-price">From <strong>₹24,999</strong>/night</span>
+                        <a href="#" class="oc-cta">Explore ›</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card reveal-item">
+                <div class="oc-img" style="background-image: url('https://images.unsplash.com/photo-1544911845-1f34a3eb46b1?w=600')">
+                    <div class="oc-badge">EARLY BIRD</div>
+                </div>
+                <div class="oc-body">
+                    <span class="oc-tag">Holidays</span>
+                    <h4>Resortify Holidays</h4>
+                    <p>Book early and unlock exclusive savings on our curated holiday packages.</p>
+                    <div class="oc-footer">
+                        <span class="oc-price">Save <strong>30%</strong> off</span>
+                        <a href="offers.html" class="oc-cta">Explore ›</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card reveal-item">
+                <div class="oc-img" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600')">
+                    <div class="oc-badge">PROMOTION</div>
+                </div>
+                <div class="oc-body">
+                    <span class="oc-tag">Weddings</span>
+                    <h4>Timeless Weddings</h4>
+                    <p>Let your special day transcend into an unforgettable celebration.</p>
+                    <div class="oc-footer">
+                        <span class="oc-price">Packages from <strong>₹3L</strong></span>
+                        <a href="#" class="oc-cta">Explore ›</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-card reveal-item">
+                <div class="oc-img" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600')">
+                    <div class="oc-badge">NEW</div>
+                </div>
+                <div class="oc-body">
+                    <span class="oc-tag">Maldives</span>
+                    <h4>Island Escapes</h4>
+                    <p>Overwater villas surrounded by the turquoise Indian Ocean.</p>
+                    <div class="oc-footer">
+                        <span class="oc-price">From <strong>$450</strong>/night</span>
+                        <a href="offers.html" class="oc-cta">Explore ›</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="track-arrows">
+            <button class="track-arrow" id="offersPrev"><i class="fas fa-arrow-left"></i></button>
+            <button class="track-arrow" id="offersNext"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- EXCLUSIVELY FOR YOU (FULL SCREEN CARDS) -->
+<section class="exclusive-section">
+    <div class="exclusive-bg" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920')"></div>
+    <div class="exclusive-overlay"></div>
+
+    <div class="exclusive-inner">
+        <div class="section-header light">
+            <div class="sh-left">
+                <div class="sh-line light"></div>
+                <div>
+                    <p class="sh-eyebrow">Curated for You</p>
+                    <h2 class="sh-title">Exclusively<br><em>For You</em></h2>
+                </div>
+            </div>
+            <p class="sh-desc">Refinement and creativity intertwine with dreamlike destinations and soulful moments.</p>
+        </div>
+
+        <div class="exc-carousel" id="excCarousel">
+            <div class="exc-card" data-label="SUITES">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600')"></div>
+                <div class="exc-info">
+                    <span>MEMBER ONLY</span>
+                    <h4>Suite Surprises</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+            <div class="exc-card" data-label="WEDDINGS">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600')"></div>
+                <div class="exc-info">
+                    <span>CELEBRATIONS</span>
+                    <h4>Timeless Weddings</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+            <div class="exc-card" data-label="ROMANTIC">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600')"></div>
+                <div class="exc-info">
+                    <span>PROMOTION</span>
+                    <h4>Romantic Stays</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+            <div class="exc-card" data-label="HOLIDAYS">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600')"></div>
+                <div class="exc-info">
+                    <span>HOLIDAYS</span>
+                    <h4>Resortify Holidays</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+            <div class="exc-card" data-label="WELLNESS">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600')"></div>
+                <div class="exc-info">
+                    <span>WELLNESS</span>
+                    <h4>J Wellness Circle</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+            <div class="exc-card" data-label="DINING">
+                <div class="exc-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600')"></div>
+                <div class="exc-info">
+                    <span>DINING</span>
+                    <h4>Epicure Membership</h4>
+                    <a href="#">MORE ›</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESTINATIONS MAP STRIP -->
+<section class="map-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Our World</p>
+                <h2 class="sh-title">Explore Destinations</h2>
+            </div>
+        </div>
+    </div>
+    <div class="dest-pills">
+        <button class="d-pill active" data-filter="all">All</button>
+        <button class="d-pill" data-filter="india">India</button>
+        <button class="d-pill" data-filter="beach">Beach</button>
+        <button class="d-pill" data-filter="mountain">Mountains</button>
+        <button class="d-pill" data-filter="international">International</button>
+        <button class="d-pill" data-filter="heritage">Heritage</button>
+    </div>
+
+    <div class="dest-mosaic" id="destMosaic">
+        <div class="dm-card" data-cat="india heritage">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600')"></div>
+            <div class="dm-info"><h5>Udaipur</h5><span>India</span></div>
+        </div>
+        <div class="dm-card" data-cat="beach international">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600')"></div>
+            <div class="dm-info"><h5>Maldives</h5><span>Overwater Villas</span></div>
+        </div>
+        <div class="dm-card" data-cat="india beach">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600')"></div>
+            <div class="dm-info"><h5>Goa</h5><span>India</span></div>
+        </div>
+        <div class="dm-card" data-cat="international">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600')"></div>
+            <div class="dm-info"><h5>Dubai</h5><span>UAE</span></div>
+        </div>
+        <div class="dm-card" data-cat="india heritage mountain">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=600')"></div>
+            <div class="dm-info"><h5>Jaipur</h5><span>India</span></div>
+        </div>
+        <div class="dm-card" data-cat="international">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600')"></div>
+            <div class="dm-info"><h5>London</h5><span>United Kingdom</span></div>
+        </div>
+        <div class="dm-card" data-cat="mountain india">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600')"></div>
+            <div class="dm-info"><h5>Shimla</h5><span>India</span></div>
+        </div>
+        <div class="dm-card" data-cat="beach international">
+            <div class="dm-img" style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600')"></div>
+            <div class="dm-info"><h5>Bali</h5><span>Indonesia</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- EVENTS & CONFERENCES -->
+<section class="events-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Occasions & Gatherings</p>
+                <h2 class="sh-title">Events & Conferences</h2>
+            </div>
+        </div>
+        <p class="sh-desc">Resortify elevates every occasion into an awe-inspiring, immersive experience to cherish forever.</p>
+    </div>
+
+    <div class="events-grid">
+        <div class="ev-card reveal-item">
+            <div class="ev-img" style="background-image: url('https://cdn.sanity.io/images/ocl5w36p/prod5/6d34584a52ea8140cfca9cc30d693325abca5925-1400x1080.jpg?w=600')"></div>
+            <div class="ev-body">
+                <h3>Meetings & Conferences</h3>
+                <p>State-of-the-art meeting spaces with impeccable service.</p>
+                <a href="#" class="ev-link">Enquire ›</a>
+            </div>
+        </div>
+        <div class="ev-card reveal-item">
+            <div class="ev-img" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600')"></div>
+            <div class="ev-body">
+                <h3>Gala Events</h3>
+                <p>From intimate gatherings to grand celebrations.</p>
+                <a href="#" class="ev-link">Enquire ›</a>
+            </div>
+        </div>
+        <div class="ev-card reveal-item">
+            <div class="ev-img" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600')"></div>
+            <div class="ev-body">
+                <h3>Timeless Weddings</h3>
+                <p>Your fairytale wedding in a legendary setting.</p>
+                <a href="#" class="ev-link">Enquire ›</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WELLNESS -->
+<section class="wellness-section reveal-section">
+    <div class="wellness-left reveal-item">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Holistic Healing</p>
+                <h2 class="sh-title">J Wellness<br><em>Circle</em></h2>
+            </div>
+        </div>
+        <p>Welcome to a sanctuary that seamlessly blends Indian heritage healing with serene contemporary comforts for the mind, body and soul.</p>
+        <div class="wellness-features">
+            <div class="wf-item"><i class="fas fa-spa"></i><span>Ayurvedic Therapies</span></div>
+            <div class="wf-item"><i class="fas fa-leaf"></i><span>Herbal Treatments</span></div>
+            <div class="wf-item"><i class="fas fa-moon"></i><span>Meditation Gardens</span></div>
+            <div class="wf-item"><i class="fas fa-water"></i><span>Hydrotherapy</span></div>
+        </div>
+        <a href="login.html" class="cta-primary">Explore Wellness ›</a>
+    </div>
+    <div class="wellness-right">
+        <div class="wellness-img-stack">
+            <div class="wi-main" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900')"></div>
+            <div class="wi-small" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400')"></div>
+        </div>
+    </div>
+</section>
+
+<!-- RESTAURANTS -->
+<section class="restaurants-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Culinary Excellence</p>
+                <h2 class="sh-title">Legendary<br>Restaurant Brands</h2>
+            </div>
+        </div>
+        <p class="sh-desc">A symphony of flavours enchants your taste buds where elegance and genuine warmth leave you truly indulged.</p>
+    </div>
+
+    <div class="rest-grid">
+        <div class="rest-item reveal-item">
+            <div class="rest-circle">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400" alt="Golden Dragon">
+                <div class="rest-hover-overlay"><span>View Menu ›</span></div>
+            </div>
+            <h5>Golden Dragon</h5>
+            <small>Pan-Asian</small>
+        </div>
+        <div class="rest-item reveal-item">
+            <div class="rest-circle">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400" alt="Wasabi">
+                <div class="rest-hover-overlay"><span>View Menu ›</span></div>
+            </div>
+            <h5>Wasabi</h5>
+            <small>Japanese</small>
+        </div>
+        <div class="rest-item reveal-item">
+            <div class="rest-circle">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400" alt="Varq">
+                <div class="rest-hover-overlay"><span>View Menu ›</span></div>
+            </div>
+            <h5>Varq</h5>
+            <small>Contemporary Indian</small>
+        </div>
+        <div class="rest-item reveal-item">
+            <div class="rest-circle">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Shamiana">
+                <div class="rest-hover-overlay"><span>View Menu ›</span></div>
+            </div>
+            <h5>Shamiana</h5>
+            <small>All-Day Dining</small>
+        </div>
+        <div class="rest-item reveal-item">
+            <div class="rest-circle">
+                <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=400" alt="Masala Craft">
+                <div class="rest-hover-overlay"><span>View Menu ›</span></div>
+            </div>
+            <h5>Masala Craft</h5>
+            <small>Indian Regional</small>
+        </div>
+    </div>
+</section>
+
+<!-- MEMBERSHIPS / LOYALTY -->
+<section class="member-section reveal-section">
+    <div class="member-bg" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920')"></div>
+    <div class="member-overlay"></div>
+    <div class="member-inner reveal-item">
+        <p class="sh-eyebrow light">Exclusive Privileges</p>
+        <h2>Join the <em>Inner Circle</em></h2>
+        <p class="member-desc">Unlock 30% member savings, priority check-in, spa credits, and bespoke experiences tailored to your preferences.</p>
+        <div class="member-tiers">
+            <div class="tier-card">
+                <i class="fas fa-star"></i>
+                <h4>Silver</h4>
+                <p>5% savings + early check-in</p>
+            </div>
+            <div class="tier-card featured">
+                <div class="tier-popular">Most Popular</div>
+                <i class="fas fa-crown"></i>
+                <h4>Gold Neupass</h4>
+                <p>15% savings + spa credits + room upgrades</p>
+            </div>
+            <div class="tier-card">
+                <i class="fas fa-gem"></i>
+                <h4>Chambers</h4>
+                <p>30% savings + personal butler + private transfer</p>
+            </div>
+        </div>
+        <a href="login.html" class="cta-primary">Become a Member</a>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Guest Stories</p>
+                <h2 class="sh-title">Voices of<br><em>Our Guests</em></h2>
+            </div>
+        </div>
+    </div>
+    <div class="test-slider" id="testSlider">
+        <div class="test-slide active">
+            <div class="test-quote">"</div>
+            <p>"The stay at Resortify Udaipur was nothing short of magical. Every detail was meticulously attended to — from the rose-petal turn-down service to the private sunset boat ride on Lake Pichola."</p>
+            <div class="test-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Guest">
+                <div>
+                    <strong>Priya Kapoor</strong>
+                    <span>Mumbai · Neupass Gold Member</span>
+                </div>
+                <div class="test-stars">★★★★★</div>
+            </div>
+        </div>
+        <div class="test-slide">
+            <div class="test-quote">"</div>
+            <p>"We celebrated our 25th anniversary at the Maldives property. The overwater villa was a dream — complete silence, turquoise water, and a team that anticipated every need before we voiced it."</p>
+            <div class="test-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Guest">
+                <div>
+                    <strong>Rahul & Meena Sharma</strong>
+                    <span>Delhi · Chambers Member</span>
+                </div>
+                <div class="test-stars">★★★★★</div>
+            </div>
+        </div>
+        <div class="test-slide">
+            <div class="test-quote">"</div>
+            <p>"The culinary journey at Varq is unlike any I've experienced. Chef's tasting menu with wine pairing — each dish a story, each bite a memory. Resortify isn't just a hotel; it's a philosophy."</p>
+            <div class="test-author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Guest">
+                <div>
+                    <strong>Anjali Mehta</strong>
+                    <span>Bangalore · Epicure Member</span>
+                </div>
+                <div class="test-stars">★★★★★</div>
+            </div>
+        </div>
+    </div>
+    <div class="test-nav">
+        <button class="test-dot active" data-index="0"></button>
+        <button class="test-dot" data-index="1"></button>
+        <button class="test-dot" data-index="2"></button>
+    </div>
+</section>
+
+<!-- MAGAZINE -->
+<section class="magazine-section reveal-section">
+    <div class="section-header">
+        <div class="sh-left">
+            <div class="sh-line"></div>
+            <div>
+                <p class="sh-eyebrow">Stories & Inspiration</p>
+                <h2 class="sh-title">Resortify<br>Magazine</h2>
+            </div>
+        </div>
+        <a href="magazine.html" class="view-all-link">All Stories ›</a>
+    </div>
+
+    <div class="mag-grid">
+        <div class="mag-featured reveal-item" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800')">
+            <div class="mag-overlay"></div>
+            <div class="mag-content">
+                <span class="mag-cat">Travel</span>
+                <h3>The Palace Hotels of Rajasthan: A Royal Journey Through Time</h3>
+                <p>6 min read</p>
+            </div>
+        </div>
+        <div class="mag-list">
+            <div class="mag-item reveal-item">
+                <div class="mag-item-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300')"></div>
+                <div class="mag-item-body">
+                    <span class="mag-cat">Dining</span>
+                    <h4>10 Signature Dishes You Must Try at Golden Dragon</h4>
+                    <small>4 min read</small>
+                </div>
+            </div>
+            <div class="mag-item reveal-item">
+                <div class="mag-item-img" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=300')"></div>
+                <div class="mag-item-body">
+                    <span class="mag-cat">Wellness</span>
+                    <h4>Ancient Rituals: The Science Behind Ayurvedic Healing</h4>
+                    <small>5 min read</small>
+                </div>
+            </div>
+            <div class="mag-item reveal-item">
+                <div class="mag-item-img" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=300')"></div>
+                <div class="mag-item-body">
+                    <span class="mag-cat">Weddings</span>
+                    <h4>Why Resortify Remains India's Most Chosen Wedding Venue</h4>
+                    <small>3 min read</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section reveal-section">
+    <div class="nl-inner reveal-item">
+        <p class="sh-eyebrow">Stay in the Know</p>
+        <h2>Join Our World</h2>
+        <p>Receive curated travel inspiration, exclusive offers, and early access to new collections.</p>
+        <form class="nl-form" id="nlForm">
+            <input type="email" placeholder="Your email address" id="nlEmail">
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+        <small>By subscribing you agree to our Privacy Policy. Unsubscribe anytime.</small>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="ft-brand">
+            <div class="ft-logo">RESORTIFY</div>
+            <p>Where luxury meets legacy. Crafting extraordinary moments since 1903.</p>
+            <div class="ft-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="ft-links">
+            <div class="ftl-col">
+                <h5>Explore</h5>
+                <a href="hotels.html">Hotels & Resorts</a>
+                <a href="#">Dining</a>
+                <a href="#">Wellness</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="destinations.html">Destinations</a>
+            </div>
+            <div class="ftl-col">
+                <h5>Memberships</h5>
+                <a href="login.html">Neupass</a>
+                <a href="#">Epicure</a>
+                <a href="#">The Chambers</a>
+                <a href="#">Business Connect</a>
+                <a href="#">HSBC Resortify Card</a>
+            </div>
+            <div class="ftl-col">
+                <h5>Company</h5>
+                <a href="#">About Resortify</a>
+                <a href="#">Careers</a>
+                <a href="#">Media Centre</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="ftl-col">
+                <h5>Help</h5>
+                <a href="#">Manage Booking</a>
+                <a href="#">FAQ</a>
+                <a href="#">Cancellation Policy</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-brands">
+        <p>OUR BRANDS</p>
+        <div class="fb-logos">
+            <span>RESORTIFY</span><span>CLARIDGES</span><span>BRIJ</span>
+            <span>ATMAN</span><span>SELEQTIONS</span><span>VIVANTA</span>
+            <span>GATEWAY</span><span>GINGER</span><span>AMA</span>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>©️ 2025 Resortify Hotels Ltd. All rights reserved.</p>
+        <div class="fb-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Cookie Settings</a>
+        </div>
+    </div>
+</footer>
+
+<!-- CONCIERGE CHAT -->
+<div class="concierge-btn" id="conciergeBtn">
+    <i class="fas fa-concierge-bell"></i>
+    <span>Concierge</span>
+</div>
+
+<div class="concierge-panel" id="conciergePanel">
+    <div class="cp-header">
+        <div>
+            <div class="cp-name">Resortify Concierge</div>
+            <div class="cp-status">● Online</div>
+        </div>
+        <button class="cp-close" id="cpClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cp-messages" id="cpMessages"></div>
+    <div class="cp-input">
+        <input type="text" id="cpInput" placeholder="Ask anything...">
+        <button id="cpSend"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+<script src="index.js"></script>
+<script src="site-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+:root {
+    --gold: #b2905a;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdfdfd;
+    overflow-x: hidden; 
+}
+
+.thankyou-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #fff 0%, #f9f4eb 100%);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: var(--gold);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: 0 auto 30px;
+    /* Initial state for JS animation */
+    opacity: 0;
+}
+
+.animated-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.animated-text span {
+    display: inline-block;
+    /* We no longer use nth-child animations here */
+}
+
+.sub-text {
+    color: #888;
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    opacity: 0; /* JS will fade this in */
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--dark);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: 0.3s;
+    opacity: 0; /* JS will fade this in */
+}
+
+.btn-home:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+.creator-credit {
+    position: absolute;
+    bottom: 40px;
+    font-size: 13px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.creator-credit span {
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+}

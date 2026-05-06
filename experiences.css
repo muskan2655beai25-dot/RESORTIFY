@@ -1,0 +1,173 @@
+:root {
+    --gold: #ad8b3a;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.glass-container {
+    background: var(--glass);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.review-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.back-home {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+h1 span {
+    color: var(--gold);
+}
+
+.rating-box p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.stars input:checked~label,
+.stars label.hovered,
+.stars label.hovered~label {
+    color: var(--gold);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+textarea,
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 12px 0;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--gold);
+    border: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Decoration Circles */
+.bg-decoration .circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.c1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(173, 139, 58, 0.1);
+    top: -10%;
+    right: -10%;
+}
+
+.c2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    bottom: -10%;
+    left: -10%;
+}
+/* Add to experiences.css */
+#progress-bar {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 4px; /* Slightly thicker for a premium feel */
+    background: var(--gold);
+    width: 0%; /* Initial state */
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top-left-radius: 20px; /* Matches your container corner */
+    z-index: 100;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Summary | Resortify</title>
+    <link rel="stylesheet" href="bill.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bill-wrapper">
+        <div class="stepper-container">
+            <div class="step completed">
+                <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+                <span>Selection</span>
+            </div>q2
+            <div class="step-line active"></div>
+            <div class="step current">
+                <div class="step-icon">2</div>
+                <span>Review Bill</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <span>Payment</span>
+            </div>
+        </div>
+
+        <div class="bill-card">
+            <header class="bill-header">
+                <div class="brand">RESORTIFY</div>
+                <div class="status-badge">RESERVATION FOLIO #8829</div>
+            </header>
+
+            <section class="bill-body">
+                <h1 class="folio-title">Booking Summary</h1>
+                <p class="folio-subtitle">Review your luxury stay details before final confirmation.</p>
+
+                <div class="info-grid">
+    <div class="info-item">
+        <span>ROOM TYPE</span>
+        <p>Standard Luxury Suite</p>
+    </div>
+    <div class="info-item">
+        <span>CHECK-IN</span>
+        <!-- JS-driven date input -->
+        <input type="date" id="checkin-date" class="edit-input" value="2026-10-24">
+    </div>
+    <div class="info-item">
+        <span>NIGHTS</span>
+        <input type="number" id="stay-nights" class="edit-input" value="3" min="1" max="30">
+    </div>
+    <div class="info-item">
+        <span>GUESTS</span>
+        <input type="number" id="guest-count" class="edit-input" value="2" min="1" max="5">
+    </div>
+</div>
+                <hr class="divider">
+
+                <table class="bill-table">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION</th>
+                            <th class="text-right">AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accommodation <br><small>3 Nights at $240/night</small></td>
+                            <td class="text-right">$720.00</td>
+                        </tr>
+                        <tr>
+                            <td>Taxes & Fees <br><small>VAT 12% + Tourism Fee</small></td>
+                            <td class="text-right">$86.40</td>
+                        </tr>
+                        <tr class="discount-row">
+                            <td>Seasonal Promo <br><small>Code: LUXESCAPE (-5%)</small></td>
+                            <td class="text-right">-$36.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="total-box">
+                    <div class="total-label">TOTAL PAYABLE</div>
+                    <div class="total-amount">$770.40</div>
+                </div>
+            </section>
+
+            <footer class="bill-footer">
+                <a href="offers.html" class="btn-back">MODIFIED SELECTION</a>
+                <button class="btn-confirm">PROCEED TO PAYMENT</button>
+            </footer>
+        </div>
+    </div>
+<script src="bill.js"></script>
+<script src="site-nav.js"></script>
+</body>
+</html>
